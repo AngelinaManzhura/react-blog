@@ -1,0 +1,89 @@
+@import '../../../responsive';
+@import '../../../variables';
+
+.categories {
+    &-container {
+        width: 100%;
+        padding: 100px 33px;
+    }
+
+    &-content {
+        width: 100%;
+        margin: 0 auto;
+
+        &-list{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+            padding: 0;
+            
+
+            &-item {
+                position: relative;
+                width: 100%;
+
+                 &-image {
+                    width: 100%;
+                }
+
+                &-description {
+                    position: absolute;
+                    bottom: 7px;
+                    padding: 17px 20px;
+                    background-color: $color-primary-light;
+                    border-right: 12px solid $color-accent;
+
+
+                    &-link {
+                        text-decoration: none;
+                        font-family: 'Outfit', sans-serif;
+                        font-size: 13px;
+                        font-weight: 300;
+                        line-height: 16px;
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include respond-to(tablet-landscape) {
+    .categories {
+        &-content {
+            &-list {
+                flex-direction: row;
+
+                &-item-description {
+                    bottom: 6px;
+                }
+            }
+        }
+    }
+}
+
+@include respond-to(laptop-small) {
+    .categories {
+        &-container {
+            padding: 100px 15px;
+        }
+
+        &-content-list {
+            gap: 19px;
+        }
+    }
+}
+
+@include respond-to(laptop) {
+    .categories {
+        &-container {
+            padding: 100px 30px;
+        }
+
+        &-content-list {
+            gap: 24px;
+        }
+    }
+}
