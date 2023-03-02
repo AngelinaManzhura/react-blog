@@ -1,0 +1,22 @@
+@import '../../responsive';
+
+.logo {
+    display: flex;
+    justify-content: center;
+
+    &-link {
+        font-size: 0;
+
+        &-img {
+            width: 100%;
+            max-width: 125px;
+        }
+    }
+}
+
+@include respond-to(tablet-landscape) {
+    .logo-link-img {
+        max-width: 147px;
+        padding-bottom: 10px;
+    }
+}

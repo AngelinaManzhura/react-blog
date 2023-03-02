@@ -1,0 +1,33 @@
+// media queries
+$break-tablet: 480px;
+$break-tablet-landscape: 768px;
+$break-laptop-small: 960px;
+$break-laptop: 1240px;
+
+// media query mixins
+// prettier-ignore
+@mixin respond-to($media) {
+  @if $media == tablet {
+    @media only screen and (min-width: $break-tablet) {
+      @content;
+    }
+  }
+
+  @else if $media == tablet-landscape {
+    @media only screen and (min-width: $break-tablet-landscape) {
+      @content;
+    }
+  }
+
+  @else if $media == laptop-small {
+    @media only screen and (min-width: $break-laptop-small) {
+      @content;
+    }
+  }
+
+  @else if $media == laptop {
+    @media only screen and (min-width: $break-laptop) {
+      @content;
+    }
+  }
+}
