@@ -1,4 +1,5 @@
 import favorites from 'assets/favorites.png'
+import { NavLink } from 'react-router-dom'
 
 type Props = {}
 
@@ -7,32 +8,38 @@ const HeaderMenu = (props: Props) => {
     <nav className="header-content-menu">
       <ul className="header-content-menu-list">
         <li className="header-content-menu-list-item">
-          <a className="header-content-menu-list-item-link" href="">
+          <NavLink to="/" className="header-content-menu-list-item-link">
             HOME
-          </a>
+          </NavLink>
         </li>
         <li className="header-content-menu-list-item">
-          <a className="header-content-menu-list-item-link" href="">
+          <NavLink to="/blog" className="header-content-menu-list-item-link">
             BLOG
-          </a>
+          </NavLink>
         </li>
         <li className="header-content-menu-list-item">
-          <a className="header-content-menu-list-item-link" href="">
+          <NavLink
+            to="/partnership"
+            className="header-content-menu-list-item-link"
+          >
             PARTNERSHIP
-          </a>
+          </NavLink>
         </li>
         <li className="header-content-menu-list-item">
-          <a className="header-content-menu-list-item-link" href="">
+          <NavLink to="/aboutme" className="header-content-menu-list-item-link">
             ABOUT ME
-          </a>
+          </NavLink>
         </li>
         <li className="header-content-menu-list-item">
-          <a className="header-content-menu-list-item-link" href="">
+          <NavLink to="/contact" className="header-content-menu-list-item-link">
             CONTACT
-          </a>
+          </NavLink>
         </li>
         <li className="header-content-menu-list-item header-content-menu-list-wrapper">
-          <a className="header-content-menu-list-item-link" href="">
+          <NavLink
+            to="/favorites"
+            className="header-content-menu-list-item-link"
+          >
             FAVORITES{' '}
             <img
               className="header-content-menu-list-wrapper-image"
@@ -40,7 +47,7 @@ const HeaderMenu = (props: Props) => {
               alt=""
             />{' '}
             0
-          </a>
+          </NavLink>
         </li>
       </ul>
     </nav>
