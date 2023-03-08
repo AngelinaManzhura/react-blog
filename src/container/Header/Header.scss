@@ -2,39 +2,39 @@
 @import '../../variables';
 
 .header {
-    width: 100%;
+width: 100%;
     padding: 5px 15px;
 
-    &-container {
+&-container {
         position: relative;
         margin: 0 auto;
     }
 
-    &-content {
-        &-burger {
-            position: absolute;
-            top: 8px;
-            right: 0;
-            border: none;
-            background-color: $color-primary-light;
+  &-content {
+      &-burger {
+          position: absolute;
+          top: 8px;
+          right: 0;
+          border: none;
+          background-color: $color-primary-light;
 
-            &-img {
-                width: 30px;
-            }
+    &-img {
+            width: 30px;
         }
+    }
 
         &-menu,
         &-button {
             display: none;
         }
-    }
+        }
 }
 
 @include respond-to(tablet-landscape) {
-    .header {
+.header {
         padding: 15px 38px 10px;
 
-        &-container {
+    &-container {
             max-width: 708px;
         }
 
@@ -47,36 +47,36 @@
             padding: 10px;
             border-top: 1px solid rgba(0, 0, 0, 0.08);
 
-            &-burger {
-                position: inherit;
-            }
-
-            &-button {
-                position: absolute;
-                right: 10px;
-                display: block;
-                width: 100%;
-                max-width: 136px;
-                height: 42px;
-                border: 2px solid $color-primary;
-                font-family: 'Outfit', sans-serif;
-                font-size: 13px;
-                font-weight: 500;
-                letter-spacing: 1px;
-                color: $color-primary;
-                background-color: $color-primary-light;
-            }
-
-            &-button:hover {
-                color: $color-accent;
-                border: 2px solid $color-accent;
-            }
+    &-burger {
+            position: inherit;
         }
-    }
+
+          &-button {
+              position: absolute;
+              right: 10px;
+              display: block;
+              width: 100%;
+              max-width: 136px;
+              height: 42px;
+              border: 2px solid $color-primary;
+              font-family: 'Outfit', sans-serif;
+              font-size: 13px;
+              font-weight: 500;
+              letter-spacing: 1px;
+              color: $color-primary;
+              background-color: $color-primary-light;
+          }
+
+          &-button:hover {
+              color: $color-accent;
+              border: 2px solid $color-accent;
+          }
+          }
+          }
 }
 
 @include respond-to(laptop-small) {
-    .header {
+.header {
         &-container {
             max-width: 940px;
         }
@@ -84,10 +84,10 @@
 }
 
 @include respond-to(laptop) {
-    .header {
+.header {
         padding: 15px 42px 10px;
 
-        &-container {
+    &-container {
             max-width: 1180px;
         }
 
@@ -96,45 +96,44 @@
                 display: none;
             }
 
-            &-menu {
-                display: block;
-                margin: 0 auto;            
+          &-menu {
+              display: block;
+              margin: 0 auto;
 
-                &-list{
-                    display: flex;
-                    gap: 40px;
-                    list-style: none;
+        &-list {
+                display: flex;
+                gap: 40px;
+                list-style: none;
 
-                    &-item-link {
-                        display: flex;
-                        text-decoration: none;
-                        font-family: 'Outfit', sans-serif;
-                        font-size: 14px;
-                        font-weight: 500;
-                        color: $color-primary;
-                    }
-
-                    &-item-link:hover {
-                        color: $color-accent;
-                    }
-
-                    &-wrapper {
-                        display: flex;
-                        align-items: center;
-
-                            &-image {
-                                width: 20px;
-                                margin: 0 5px;
-                            }
-                    }
-                }
-
-               
+        &-item-link {
+                display: flex;
+                text-decoration: none;
+                font-family: 'Outfit', sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+                color: $color-primary;
             }
-        }
-    }
+
+                  &-item-link-active {
+                      display: flex;
+                      text-decoration: none;
+                      font-family: 'Outfit', sans-serif;
+                      font-size: 14px;
+                      font-weight: 500;
+                      color: $color-accent;
+                  }
+
+                  &-wrapper {
+                      display: flex;
+                      align-items: center;
+
+            &-image {
+                    width: 20px;
+                    margin: 0 5px;
+                }
+            }
+            }
+          }
+          }
+          }
 }
-
-
-
- 
