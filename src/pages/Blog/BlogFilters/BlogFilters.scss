@@ -1,0 +1,31 @@
+@import '../../../responsive';
+@import '../../../variables';
+
+.blog-filters {
+  &-categories {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    &-icon {
+      width: 15px;
+    }
+
+    &-information {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 16px;
+      color: $color-primary;
+    }
+  }
+}
+
+@include respond-to(laptop-small) {
+  .blog-filters {
+    &-categories-information {
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+}

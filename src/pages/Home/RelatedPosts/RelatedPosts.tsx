@@ -17,7 +17,7 @@ const RelatedPosts = (props: Props) => {
           </div>
           <h1 className="related-posts-content-title">Related posts</h1>
           <ul className="related-posts-content-list">
-            {relatedPostsArray.map((el) => (
+            {relatedPostsArray.slice(0, 3).map((el) => (
               <li key={el.id} className="related-posts-content-list-item">
                 <img
                   className="related-posts-content-list-item-image"
@@ -28,7 +28,7 @@ const RelatedPosts = (props: Props) => {
                   <div className="related-posts-content-list-item-description-wrapper">
                     <a
                       className="related-posts-content-list-item-description-admin"
-                      href=""
+                      href="/"
                     >
                       <img
                         className="related-posts-content-list-item-description-admin-icon"
@@ -41,7 +41,7 @@ const RelatedPosts = (props: Props) => {
                     </a>
                     <a
                       className="related-posts-content-list-item-description-date"
-                      href=""
+                      href="/"
                     >
                       <img
                         className="related-posts-content-list-item-description-date-icon"

@@ -31,7 +31,7 @@ const PopularPosts = (props: Props) => {
                 <div className="popular-posts-content-pinned-post-description-wrapper">
                   <a
                     className="popular-posts-content-pinned-post-description-admin"
-                    href=""
+                    href="/"
                   >
                     <img
                       className="popular-posts-content-pinned-post-description-admin-icon"
@@ -44,7 +44,7 @@ const PopularPosts = (props: Props) => {
                   </a>
                   <a
                     className="popular-posts-content-pinned-post-description-date"
-                    href=""
+                    href="/"
                   >
                     <img
                       className="popular-posts-content-pinned-post-description-date-icon"
@@ -57,7 +57,7 @@ const PopularPosts = (props: Props) => {
                   </a>
                   <a
                     className="popular-posts-content-pinned-post-description-categories"
-                    href=""
+                    href="/"
                   >
                     <span className="popular-posts-content-pinned-post-description-categories-information">
                       Categories
@@ -78,7 +78,7 @@ const PopularPosts = (props: Props) => {
           <section className="popular-posts-content-another">
             <div className="popular-posts-content-another-container">
               <ul className="popular-posts-content-another-list">
-                {relatedPostsArray.map((el) => (
+                {relatedPostsArray.slice(0, 3).map((el) => (
                   <li
                     key={el.id}
                     className="popular-posts-content-another-list-item"
@@ -97,7 +97,7 @@ const PopularPosts = (props: Props) => {
                           <img
                             className="popular-posts-content-another-list-item-description-admin-icon"
                             src={el.adminIcon}
-                            alt=""
+                            alt="/"
                           />
                           <span className="popular-posts-content-another-list-item-description-admin-information">
                             {el.adminInformation}
@@ -105,7 +105,7 @@ const PopularPosts = (props: Props) => {
                         </a>
                         <a
                           className="popular-posts-content-another-list-item-description-date"
-                          href=""
+                          href="/"
                         >
                           <img
                             className="popular-posts-content-another-list-item-description-date-icon"
@@ -118,7 +118,7 @@ const PopularPosts = (props: Props) => {
                         </a>
                         <a
                           className="popular-posts-content-another-list-item-description-categories"
-                          href=""
+                          href="/"
                         >
                           <span className="popular-posts-content-another-list-item-description-categories-information">
                             {el.categoriesInformation}
@@ -131,7 +131,7 @@ const PopularPosts = (props: Props) => {
                         </a>
                         <a
                           className="popular-posts-content-another-list-item-description-favorites"
-                          href=""
+                          href="/"
                         >
                           <img
                             className="popular-posts-content-another-list-item-description-favorites-icon"

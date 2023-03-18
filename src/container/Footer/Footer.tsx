@@ -11,17 +11,17 @@ const Footer = (props: Props) => {
           <div className="footer-content-wrapper">
             <ul className="footer-content-list">
               <li className="footer-content-list-item">
-                <a className="footer-content-list-item-link" href="">
+                <a className="footer-content-list-item-link" href="/">
                   ACCESSIBILITY
                 </a>
               </li>
               <li className="footer-content-list-item">
-                <a className="footer-content-list-item-link" href="">
+                <a className="footer-content-list-item-link" href="/">
                   COMMENT
                 </a>
               </li>
               <li className="footer-content-list-item">
-                <a className="footer-content-list-item-link" href="">
+                <a className="footer-content-list-item-link" href="/">
                   PHOTO
                 </a>
               </li>
@@ -29,17 +29,17 @@ const Footer = (props: Props) => {
             <Logo />
             <ul className="footer-content-list">
               <li className="footer-content-list-item">
-                <a className="footer-content-list-item-link" href="">
+                <a className="footer-content-list-item-link" href="/">
                   PRIVACY
                 </a>
               </li>
               <li className="footer-content-list-item">
-                <a className="footer-content-list-item-link" href="">
+                <a className="footer-content-list-item-link" href="/">
                   TERMS
                 </a>
               </li>
               <li className="footer-content-list-item">
-                <a className="footer-content-list-item-link" href="">
+                <a className="footer-content-list-item-link" href="/">
                   DESIGNED BY
                 </a>
               </li>
