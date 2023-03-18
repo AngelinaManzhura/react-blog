@@ -18,7 +18,6 @@ export const initialFilters = {
 
 const Blog = (props: Props) => {
   const { category } = useParams()
-  console.log(useParams())
 
   const filters = category
     ? {
@@ -32,9 +31,6 @@ const Blog = (props: Props) => {
   const diplayPost = state.category
     ? relatedPostsArray.filter((post) => post.category.name === state.category)
     : relatedPostsArray
-
-  console.log('category', category)
-  console.log('diplayPost', diplayPost)
 
   return (
     <main className="blog">
@@ -51,19 +47,7 @@ const Blog = (props: Props) => {
 
       <section className="blog-posts">
         <div className="blog-posts-content">
-          <div className="blog-posts-content-filters">
-            <BlogFilters filters={state} onChange={setState} />
-            <a className="blog-posts-content-filters-show" href="/">
-              <img
-                className="blog-posts-content-filters-show-icon"
-                src={blog_show_all}
-                alt=""
-              />
-              <span className="blog-posts-content-filters-show-information">
-                Show all
-              </span>
-            </a>
-          </div>
+          <BlogFilters filters={state} onChange={setState} />
           <div className="blog-posts-content-information">
             <ul className="blog-posts-content-information-list">
               {diplayPost.map((el) => (

@@ -52,31 +52,6 @@
       padding: 30px 33px;
       margin: 0 auto;
 
-      &-filters {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 30px;
-
-        &-show {
-          display: flex;
-          align-items: center;
-          gap: 3px;
-          text-decoration: none;
-
-          &-icon {
-            width: 15px;
-          }
-
-          &-information {
-            font-family: 'Outfit', sans-serif;
-            font-size: 13px;
-            font-weight: 300;
-            line-height: 16px;
-            color: $color-primary;
-          }
-        }
-      }
-
       &-information {
         &-list {
           display: flex;
