@@ -44,22 +44,22 @@ const Aside = (props: Props) => {
             <h3 className="aside-content-categories-title">CATEGORIES</h3>
             <ul className="aside-content-categories-list">
               <li className="aside-content-categories-list-item">
-                <a className="aside-content-categories-list-item-link" href="">
+                <a className="aside-content-categories-list-item-link" href="/">
                   Fashion
                 </a>
               </li>
               <li className="aside-content-categories-list-item">
-                <a className="aside-content-categories-list-item-link" href="">
+                <a className="aside-content-categories-list-item-link" href="/">
                   Lifestyle
                 </a>
               </li>
               <li className="aside-content-categories-list-item">
-                <a className="aside-content-categories-list-item-link" href="">
+                <a className="aside-content-categories-list-item-link" href="/">
                   Pinned
                 </a>
               </li>
               <li className="aside-content-categories-list-item">
-                <a className="aside-content-categories-list-item-link" href="">
+                <a className="aside-content-categories-list-item-link" href="/">
                   Travel
                 </a>
               </li>

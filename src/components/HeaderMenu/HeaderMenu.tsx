@@ -22,20 +22,6 @@ const HeaderMenu = (props: Props) => {
           />{' '}
           0
         </HeaderMenuItem>
-        {/* <li className="header-content-menu-list-item header-content-menu-list-wrapper">
-          <NavLink
-            to="/favorites"
-            className="header-content-menu-list-item-link"
-          >
-            FAVORITES{' '}
-            <img
-              className="header-content-menu-list-wrapper-image"
-              src={favorites}
-              alt=""
-            />{' '}
-            0
-          </NavLink>
-        </li> */}
       </ul>
     </nav>
   )

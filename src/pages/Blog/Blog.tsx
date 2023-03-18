@@ -2,9 +2,6 @@ import { useParams } from 'react-router-dom'
 import relatedPostsArray from 'utils/relatedPostsArray'
 import related_posts_circle from 'assets/related_posts_circle.svg'
 import blog_banner from 'assets/blog_banner.jpeg'
-import blog_categories from 'assets/blog_categories.png'
-import blog_tags from 'assets/blog_tags.png'
-import blog_authors from 'assets/blog_authors.png'
 import blog_show_all from 'assets/blog_show_all.png'
 import BlogFilters from './BlogFilters/BlogFilters'
 import './Blog.scss'
@@ -55,40 +52,8 @@ const Blog = (props: Props) => {
       <section className="blog-posts">
         <div className="blog-posts-content">
           <div className="blog-posts-content-filters">
-            {/* <div className="blog-posts-content-filters-by">
-              <a className="blog-posts-content-filters-by-categories" href="">
-                <img
-                  className="blog-posts-content-filters-by-categories-icon"
-                  src={blog_categories}
-                  alt=""
-                />
-                <span className="blog-posts-content-filters-by-categories-information">
-                  Categories
-                </span>
-              </a>
-              <a className="blog-posts-content-filters-by-tags" href="">
-                <img
-                  className="blog-posts-content-filters-by-tags-icon"
-                  src={blog_tags}
-                  alt=""
-                />
-                <span className="blog-posts-content-filters-by-tags-information">
-                  Tags
-                </span>
-              </a>
-              <a className="blog-posts-content-filters-by-authors" href="">
-                <img
-                  className="blog-posts-content-filters-by-authors-icon"
-                  src={blog_authors}
-                  alt=""
-                />
-                <span className="blog-posts-content-filters-by-authors-information">
-                  Authors
-                </span>
-              </a>
-            </div> */}
             <BlogFilters filters={state} onChange={setState} />
-            <a className="blog-posts-content-filters-show" href="">
+            <a className="blog-posts-content-filters-show" href="/">
               <img
                 className="blog-posts-content-filters-show-icon"
                 src={blog_show_all}
@@ -115,7 +80,7 @@ const Blog = (props: Props) => {
                     <div className="blog-posts-content-information-list-item-description-wrapper">
                       <a
                         className="blog-posts-content-information-list-item-description-admin"
-                        href=""
+                        href="/"
                       >
                         <img
                           className="blog-posts-content-information-list-item-description-admin-icon"
@@ -128,7 +93,7 @@ const Blog = (props: Props) => {
                       </a>
                       <a
                         className="blog-posts-content-information-list-item-description-date"
-                        href=""
+                        href="/"
                       >
                         <img
                           className="blog-posts-content-information-list-item-description-date-icon"
@@ -141,7 +106,7 @@ const Blog = (props: Props) => {
                       </a>
                       <a
                         className="blog-posts-content-information-list-item-description-categories"
-                        href=""
+                        href="/"
                       >
                         <span className="blog-posts-content-information-list-item-description-categories-information">
                           {el.categoriesInformation}
@@ -154,7 +119,7 @@ const Blog = (props: Props) => {
                       </a>
                       <a
                         className="blog-posts-content-information-list-item-description-favorites"
-                        href=""
+                        href="/"
                       >
                         <img
                           className="blog-posts-content-information-list-item-description-favorites-icon"
