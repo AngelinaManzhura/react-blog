@@ -20,6 +20,7 @@ const App = (props: Props) => {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/blog" element={<Blog />}></Route>
+        <Route path="/blog/:category" element={<Blog />}></Route>
         <Route path="/partnership" element={<Partnership />}></Route>
         <Route path="/aboutme" element={<AboutMe />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
