@@ -57,33 +57,6 @@
         justify-content: space-between;
         margin-bottom: 30px;
 
-        &-by {
-          display: flex;
-          flex-wrap: nowrap;
-          gap: 5px;
-
-          &-categories,
-          &-tags,
-          &-authors {
-            display: flex;
-            align-items: center;
-            gap: 3px;
-            text-decoration: none;
-
-            &-icon {
-              width: 15px;
-            }
-
-            &-information {
-              font-family: 'Outfit', sans-serif;
-              font-size: 13px;
-              font-weight: 300;
-              line-height: 16px;
-              color: $color-primary;
-            }
-          }
-        }
-
         &-show {
           display: flex;
           align-items: center;
@@ -186,10 +159,6 @@
 
     &-posts {
       &-content {
-        &-filters-by {
-          gap: 20px;
-        }
-
         &-information {
           &-list-item-description-title {
             font-size: 38px;
@@ -255,17 +224,6 @@
         padding: 30px 15px 60px;
 
         &-filters {
-          &-by {
-            &-categories,
-            &-tags,
-            &-authors {
-              &-information {
-                font-size: 16px;
-                line-height: 28px;
-              }
-            }
-          }
-
           &-show-information {
             font-size: 16px;
             line-height: 28px;

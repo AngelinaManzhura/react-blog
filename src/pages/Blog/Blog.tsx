@@ -8,6 +8,7 @@ import blog_authors from 'assets/blog_authors.png'
 import blog_show_all from 'assets/blog_show_all.png'
 import BlogFilters from './BlogFilters/BlogFilters'
 import './Blog.scss'
+import './BlogFilters/BlogFilters.scss'
 import useSetState from 'hooks/useSetState'
 
 type Props = {}

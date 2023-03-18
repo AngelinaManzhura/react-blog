@@ -24,13 +24,16 @@ const BlogFilter = ({ filters, onChange }: Props) => {
     <section className="blog-filters">
       <div>
         <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-          <InputLabel id="categories-select-standard-label">
+          <InputLabel
+            id="categories-select-standard-label"
+            className="blog-filters-categories"
+          >
             <img
-              className="blog-posts-content-filters-by-categories-icon"
+              className="blog-filters-categories-icon"
               src={blog_categories}
               alt=""
             />
-            <span className="blog-posts-content-filters-by-categories-information">
+            <span className="blog-filters-categories-information">
               Categories
             </span>
           </InputLabel>
@@ -41,21 +44,37 @@ const BlogFilter = ({ filters, onChange }: Props) => {
             label="Categories"
             onChange={(e) => onChange({ category: e.target.value })}
           >
-            <MenuItem value="travel">Travel</MenuItem>
-            <MenuItem value="fashion">Fashion</MenuItem>
-            <MenuItem value="lifestyle">Lifestyle</MenuItem>
+            <MenuItem
+              className="blog-filters-categories-information"
+              value="travel"
+            >
+              Travel
+            </MenuItem>
+            <MenuItem
+              className="blog-filters-categories-information"
+              value="fashion"
+            >
+              Fashion
+            </MenuItem>
+            <MenuItem
+              className="blog-filters-categories-information"
+              value="lifestyle"
+            >
+              Lifestyle
+            </MenuItem>
           </Select>
         </FormControl>
         <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-          <InputLabel id="tag-select-standard-label">
+          <InputLabel
+            id="tag-select-standard-label"
+            className="blog-filters-categories"
+          >
             <img
-              className="blog-posts-content-filters-by-tags-icon"
+              className="blog-filters-categories-icon"
               src={blog_tags}
               alt=""
             />
-            <span className="blog-posts-content-filters-by-tags-information">
-              Tags
-            </span>
+            <span className="blog-filters-categories-information">Tags</span>
           </InputLabel>
           <Select
             labelId="tag-select-standard-label"
@@ -64,21 +83,37 @@ const BlogFilter = ({ filters, onChange }: Props) => {
             label="Tag"
             onChange={(e) => onChange({ tag: e.target.value })}
           >
-            <MenuItem value="mountains">Mountains</MenuItem>
-            <MenuItem value="sea">Sea</MenuItem>
-            <MenuItem value="makeup">Make-Up</MenuItem>
+            <MenuItem
+              className="blog-filters-categories-information"
+              value="mountains"
+            >
+              Mountains
+            </MenuItem>
+            <MenuItem
+              className="blog-filters-categories-information"
+              value="sea"
+            >
+              Sea
+            </MenuItem>
+            <MenuItem
+              className="blog-filters-categories-information"
+              value="makeup"
+            >
+              Make-Up
+            </MenuItem>
           </Select>
         </FormControl>
         <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-          <InputLabel id="author-standard-label">
+          <InputLabel
+            id="author-standard-label"
+            className="blog-filters-categories"
+          >
             <img
-              className="blog-posts-content-filters-by-authors-icon"
+              className="blog-filters-categories-icon"
               src={blog_authors}
               alt=""
             />
-            <span className="blog-posts-content-filters-by-authors-information">
-              Authors
-            </span>
+            <span className="blog-filters-categories-information">Authors</span>
           </InputLabel>
           <Select
             labelId="author-select-standard-label"
@@ -87,8 +122,18 @@ const BlogFilter = ({ filters, onChange }: Props) => {
             label="Author"
             onChange={(e) => onChange({ author: e.target.value })}
           >
-            <MenuItem value="admin">Admin</MenuItem>
-            <MenuItem value="John Doe">John Doe</MenuItem>
+            <MenuItem
+              className="blog-filters-categories-information"
+              value="admin"
+            >
+              Admin
+            </MenuItem>
+            <MenuItem
+              className="blog-filters-categories-information"
+              value="John Doe"
+            >
+              John Doe
+            </MenuItem>
           </Select>
         </FormControl>
       </div>
