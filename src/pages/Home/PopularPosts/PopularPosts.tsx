@@ -92,7 +92,7 @@ const PopularPosts = (props: Props) => {
                       <div className="popular-posts-content-another-list-item-description-wrapper">
                         <a
                           className="popular-posts-content-another-list-item-description-admin"
-                          href=""
+                          href="/"
                         >
                           <img
                             className="popular-posts-content-another-list-item-description-admin-icon"
