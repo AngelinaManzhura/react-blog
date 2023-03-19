@@ -1,7 +1,7 @@
 import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
-import Select, { SelectChangeEvent } from '@mui/material/Select'
+import Select from '@mui/material/Select'
 import blog_categories from 'assets/blog_categories.png'
 import blog_tags from 'assets/blog_tags.png'
 import blog_authors from 'assets/blog_authors.png'

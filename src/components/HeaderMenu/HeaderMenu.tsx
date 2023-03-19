@@ -1,5 +1,4 @@
 import favorites from 'assets/favorites.png'
-import { NavLink } from 'react-router-dom'
 import HeaderMenuItem from './HeaderMenuItem'
 
 type Props = {}
