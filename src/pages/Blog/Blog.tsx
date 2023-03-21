@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import relatedPostsArray from 'utils/relatedPostsArray'
 import related_posts_circle from 'assets/related_posts_circle.svg'
 import blog_banner from 'assets/blog_banner.jpeg'
@@ -111,8 +111,13 @@ const Blog = (props: Props) => {
                         />
                       </a>
                     </div>
-                    <h2 className="blog-posts-content-information-list-item-description-title">
-                      {el.title}
+                    <h2>
+                      <Link
+                        className="blog-posts-content-information-list-item-description-title"
+                        to={`/articles/${el.id}`}
+                      >
+                        {el.title}{' '}
+                      </Link>
                     </h2>
                   </div>
                 </li>

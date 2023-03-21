@@ -108,6 +108,11 @@
                 line-height: 29px;
                 color: $color-primary;
                 margin-bottom: 15px;
+                text-decoration: none;
+
+                &:hover {
+                  color: $color-accent;
+                }
               }
             }
           }

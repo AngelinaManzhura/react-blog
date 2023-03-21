@@ -6,6 +6,7 @@ import popular_post_categories_icon from 'assets/popular_post_categories_icon.pn
 import relatedPostsArray from 'utils/relatedPostsArray'
 import Aside from 'components/Aside/Aside'
 import './PopularPosts.scss'
+import { Link } from 'react-router-dom'
 
 type Props = {}
 
@@ -140,8 +141,13 @@ const PopularPosts = (props: Props) => {
                           />
                         </a>
                       </div>
-                      <h2 className="popular-posts-content-another-list-item-description-title">
-                        {el.title}
+                      <h2>
+                        <Link
+                          className="popular-posts-content-another-list-item-description-title"
+                          to={`/articles/${el.id}`}
+                        >
+                          {el.title}
+                        </Link>
                       </h2>
                     </div>
                   </li>

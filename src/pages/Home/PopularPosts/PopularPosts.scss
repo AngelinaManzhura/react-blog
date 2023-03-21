@@ -10,13 +10,13 @@
     margin: 0 auto;
   }
 
-  &-content { 
-    &-pinned { 
+  &-content {
+    &-pinned {
       &-logo {
         display: flex;
         align-items: center;
         gap: 15px;
-        
+
         margin-bottom: 35px;
 
         &-description {
@@ -143,6 +143,11 @@
               line-height: 29px;
               color: $color-primary;
               margin-bottom: 15px;
+              text-decoration: none;
+
+              &:hover {
+                color: $color-accent;
+              }
             }
           }
         }
