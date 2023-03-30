@@ -1,4 +1,4 @@
-type RelatedPosts = {
+export type RelatedPosts = {
   id: number
   image: string
   adminIcon: string
@@ -209,5 +209,8 @@ const relatedPostsArray: RelatedPosts[] = [
     title: 'Cum sociis natoque penatibus et turpis',
   },
 ]
+
+export const getRelatedPostsObject = (array: RelatedPosts[]) =>
+  array.reduce((object, post) => ({ ...object, [post.id]: post }), {})
 
 export default relatedPostsArray
