@@ -7,6 +7,7 @@ import blog_tags from 'assets/blog_tags.png'
 import blog_authors from 'assets/blog_authors.png'
 import blog_show_all from 'assets/blog_show_all.png'
 import { initialFilters } from '../Blog'
+import './BlogFilters.scss'
 
 type Props = {
   filters: {

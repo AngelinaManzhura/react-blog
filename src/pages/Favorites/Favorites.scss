@@ -1,0 +1,28 @@
+@import '../../responsive';
+@import '../../variables';
+
+.favorites-content {
+  width: 100%;
+  padding: 30px 33px;
+  margin: 0 auto;
+}
+
+@include respond-to(tablet-landscape) {
+  .favorites-content {
+    max-width: 708px;
+  }
+}
+
+@include respond-to(laptop-small) {
+  .favorites-content {
+    max-width: 940px;
+    padding: 30px 15px 60px;
+  }
+}
+
+@include respond-to(laptop) {
+  .favorites-content {
+    max-width: 1180px;
+    padding: 30px 30px 60px;
+  }
+}

@@ -84,6 +84,10 @@
                 align-items: center;
                 gap: 3px;
                 text-decoration: none;
+                border: none;
+                background-color: $color-primary-light;
+                color: $color-accent;
+
                 &-icon {
                   width: 15px;
                 }

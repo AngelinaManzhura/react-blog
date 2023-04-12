@@ -1,11 +1,12 @@
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import relatedPostsArray from 'utils/relatedPostsArray'
 import related_posts_circle from 'assets/related_posts_circle.svg'
 import blog_banner from 'assets/blog_banner.jpeg'
 import BlogFilters from './BlogFilters/BlogFilters'
 import './Blog.scss'
-import './BlogFilters/BlogFilters.scss'
+
 import useSetState from 'hooks/useSetState'
+import BlogItem from './BlogItem'
 
 type Props = {}
 
@@ -50,77 +51,7 @@ const Blog = (props: Props) => {
           <div className="blog-posts-content-information">
             <ul className="blog-posts-content-information-list">
               {diplayPost.map((el) => (
-                <li
-                  key={el.id}
-                  className="blog-posts-content-information-list-item"
-                >
-                  <img
-                    className="blog-posts-content-information-list-item-image"
-                    src={el.image}
-                    alt=""
-                  />
-                  <div className="blog-posts-content-information-list-item-description">
-                    <div className="blog-posts-content-information-list-item-description-wrapper">
-                      <a
-                        className="blog-posts-content-information-list-item-description-admin"
-                        href="/"
-                      >
-                        <img
-                          className="blog-posts-content-information-list-item-description-admin-icon"
-                          src={el.adminIcon}
-                          alt=""
-                        />
-                        <span className="blog-posts-content-information-list-item-description-admin-information">
-                          {el.adminInformation}
-                        </span>
-                      </a>
-                      <a
-                        className="blog-posts-content-information-list-item-description-date"
-                        href="/"
-                      >
-                        <img
-                          className="blog-posts-content-information-list-item-description-date-icon"
-                          src={el.dateIcon}
-                          alt=""
-                        />
-                        <span className="blog-posts-content-information-list-item-description-date-information">
-                          {el.date}
-                        </span>
-                      </a>
-                      <a
-                        className="blog-posts-content-information-list-item-description-categories"
-                        href="/"
-                      >
-                        <span className="blog-posts-content-information-list-item-description-categories-information">
-                          {el.categoriesInformation}
-                        </span>
-                        <img
-                          className="blog-posts-content-information-list-item-description-categories-icon"
-                          src={el.categoriesIcon}
-                          alt=""
-                        />
-                      </a>
-                      <a
-                        className="blog-posts-content-information-list-item-description-favorites"
-                        href="/"
-                      >
-                        <img
-                          className="blog-posts-content-information-list-item-description-favorites-icon"
-                          src={el.favoritesIcon}
-                          alt=""
-                        />
-                      </a>
-                    </div>
-                    <h2>
-                      <Link
-                        className="blog-posts-content-information-list-item-description-title"
-                        to={`/articles/${el.id}`}
-                      >
-                        {el.title}{' '}
-                      </Link>
-                    </h2>
-                  </div>
-                </li>
+                <BlogItem post={el} />
               ))}
             </ul>
           </div>

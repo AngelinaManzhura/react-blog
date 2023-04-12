@@ -1,12 +1,12 @@
+import Aside from 'components/Aside/Aside'
+import PopularPostsItem from './PopularPostsItem'
+import relatedPostsArray from 'utils/relatedPostsArray'
 import popular_posts_circle from 'assets/popular_posts_circle.svg'
 import pinned_post_image from 'assets/pinned_post_image.png'
 import popular_post_admin_icon from 'assets/popular_post_admin_icon.png'
 import popular_post_date_icon from 'assets/popular_post_date_icon.svg'
 import popular_post_categories_icon from 'assets/popular_post_categories_icon.png'
-import relatedPostsArray from 'utils/relatedPostsArray'
-import Aside from 'components/Aside/Aside'
 import './PopularPosts.scss'
-import { Link } from 'react-router-dom'
 
 type Props = {}
 
@@ -80,77 +80,7 @@ const PopularPosts = (props: Props) => {
             <div className="popular-posts-content-another-container">
               <ul className="popular-posts-content-another-list">
                 {relatedPostsArray.slice(0, 3).map((el) => (
-                  <li
-                    key={el.id}
-                    className="popular-posts-content-another-list-item"
-                  >
-                    <img
-                      className="popular-posts-content-another-list-item-image"
-                      src={el.image}
-                      alt=""
-                    />
-                    <div className="popular-posts-content-another-list-item-description">
-                      <div className="popular-posts-content-another-list-item-description-wrapper">
-                        <a
-                          className="popular-posts-content-another-list-item-description-admin"
-                          href="/"
-                        >
-                          <img
-                            className="popular-posts-content-another-list-item-description-admin-icon"
-                            src={el.adminIcon}
-                            alt="/"
-                          />
-                          <span className="popular-posts-content-another-list-item-description-admin-information">
-                            {el.adminInformation}
-                          </span>
-                        </a>
-                        <a
-                          className="popular-posts-content-another-list-item-description-date"
-                          href="/"
-                        >
-                          <img
-                            className="popular-posts-content-another-list-item-description-date-icon"
-                            src={el.dateIcon}
-                            alt=""
-                          />
-                          <span className="popular-posts-content-another-list-item-description-date-information">
-                            {el.date}
-                          </span>
-                        </a>
-                        <a
-                          className="popular-posts-content-another-list-item-description-categories"
-                          href="/"
-                        >
-                          <span className="popular-posts-content-another-list-item-description-categories-information">
-                            {el.categoriesInformation}
-                          </span>
-                          <img
-                            className="popular-posts-content-another-list-item-description-categories-icon"
-                            src={el.categoriesIcon}
-                            alt=""
-                          />
-                        </a>
-                        <a
-                          className="popular-posts-content-another-list-item-description-favorites"
-                          href="/"
-                        >
-                          <img
-                            className="popular-posts-content-another-list-item-description-favorites-icon"
-                            src={el.favoritesIcon}
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <h2>
-                        <Link
-                          className="popular-posts-content-another-list-item-description-title"
-                          to={`/articles/${el.id}`}
-                        >
-                          {el.title}
-                        </Link>
-                      </h2>
-                    </div>
-                  </li>
+                  <PopularPostsItem post={el} />
                 ))}
               </ul>
             </div>
