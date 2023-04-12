@@ -1,9 +1,32 @@
 import favorites from 'assets/favorites.png'
 import HeaderMenuItem from './HeaderMenuItem'
+import { useAppSelector } from 'redux/hooks'
+import relatedPostsArray, {
+  RelatedPosts,
+  getRelatedPostsObject,
+} from 'utils/relatedPostsArray'
 
-type Props = {}
+type Props = {
+  postsObject?: {
+    [id: number]: RelatedPosts
+  }
+}
 
-const HeaderMenu = (props: Props) => {
+const HeaderMenu = ({
+  postsObject = getRelatedPostsObject(relatedPostsArray),
+}: Props) => {
+  const likeReducer = useAppSelector((state) => state.likeReducer)
+
+  const filteredObject = Object.fromEntries(
+    Object.entries(likeReducer).filter((item) => item[1] === true)
+  )
+
+  const lengthFiltered = Object.entries(filteredObject).filter(
+    (item) => item.length
+  )
+
+  console.log(lengthFiltered)
+
   return (
     <nav className="header-content-menu">
       <ul className="header-content-menu-list">
@@ -19,7 +42,7 @@ const HeaderMenu = (props: Props) => {
             src={favorites}
             alt=""
           />{' '}
-          0
+          {Object.keys(lengthFiltered).length}
         </HeaderMenuItem>
       </ul>
     </nav>

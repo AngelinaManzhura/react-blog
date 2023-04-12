@@ -9,6 +9,7 @@ import Partnership from 'pages/Partnership/Partnership'
 import AboutMe from 'pages/AboutMe/AboutMe'
 import Contact from 'pages/Contact/Contact'
 import Favorites from 'pages/Favorites/Favorites'
+import ArticlePage from 'pages/ArticlePage/ArticlePage'
 
 type Props = {}
 
@@ -25,6 +26,7 @@ const App = (props: Props) => {
         <Route path="/aboutme" element={<AboutMe />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/favorites" element={<Favorites />}></Route>
+        <Route path="/articles/:id" element={<ArticlePage />}></Route>
       </Routes>
       <Footer />
     </StyledEngineProvider>
