@@ -27,7 +27,11 @@ const ArticlePage = ({
   return (
     <main className="article">
       <section className="article-banner">
-        <img className="article-banner-image" src={article.image}></img>
+        <img
+          className="article-banner-image"
+          src={article.image}
+          alt="article banner"
+        />
         <div className="article-banner-wrapper">
           <div className="article-banner-content">
             <h1 className="article-banner-content-title">{article.title}</h1>

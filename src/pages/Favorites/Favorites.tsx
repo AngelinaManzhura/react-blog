@@ -1,4 +1,4 @@
-import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import { useAppSelector } from 'redux/hooks'
 import BlogItem from 'pages/Blog/BlogItem'
 import related_posts_circle from 'assets/related_posts_circle.svg'
 import favorites_banner from 'assets/favorites_banner.webp'
@@ -22,8 +22,6 @@ const Favorites = ({
   const filteredObject = Object.fromEntries(
     Object.entries(likeReducer).filter((item) => item[1] === true)
   )
-
-  const dispatch = useAppDispatch()
 
   return (
     <>
