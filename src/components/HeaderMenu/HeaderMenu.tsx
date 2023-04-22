@@ -1,20 +1,12 @@
-import favorites from 'assets/favorites.png'
-import HeaderMenuItem from './HeaderMenuItem'
 import { useAppSelector } from 'redux/hooks'
-import relatedPostsArray, {
-  RelatedPosts,
-  getRelatedPostsObject,
-} from 'utils/relatedPostsArray'
+import HeaderMenuItem from './HeaderMenuItem'
+import navArray from 'utils/navArray'
 
 type Props = {
-  postsObject?: {
-    [id: number]: RelatedPosts
-  }
+  onClick?: () => void
 }
 
-const HeaderMenu = ({
-  postsObject = getRelatedPostsObject(relatedPostsArray),
-}: Props) => {
+const HeaderMenu = ({ onClick = () => {} }: Props) => {
   const likeReducer = useAppSelector((state) => state.likeReducer)
 
   const filteredObject = Object.fromEntries(
@@ -25,27 +17,22 @@ const HeaderMenu = ({
     (item) => item.length
   )
 
-  console.log(lengthFiltered)
-
   return (
-    <nav className="header-content-menu">
-      <ul className="header-content-menu-list">
-        <HeaderMenuItem to="/">HOME</HeaderMenuItem>
-        <HeaderMenuItem to="/blog">BLOG</HeaderMenuItem>
-        <HeaderMenuItem to="/partnership">PARTNERSHIP</HeaderMenuItem>
-        <HeaderMenuItem to="/aboutme">ABOUT ME</HeaderMenuItem>
-        <HeaderMenuItem to="/contact">CONTACT</HeaderMenuItem>
-        <HeaderMenuItem to="/favorites">
-          FAVORITES{' '}
-          <img
-            className="header-content-menu-list-wrapper-image"
-            src={favorites}
-            alt=""
-          />{' '}
-          {Object.keys(lengthFiltered).length}
+    <ul className="header-content-menu-list">
+      {navArray.map((el) => (
+        <HeaderMenuItem key={el.label} to={el.link} onClick={onClick}>
+          {el.label}
+          {el.icon && (
+            <img
+              className="header-content-menu-list-wrapper-image"
+              src={el.icon}
+              alt=""
+            />
+          )}
+          {el.label === 'FAVORITES' && Object.keys(lengthFiltered).length}
         </HeaderMenuItem>
-      </ul>
-    </nav>
+      ))}
+    </ul>
   )
 }
 

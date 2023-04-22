@@ -51,7 +51,7 @@ const Blog = (props: Props) => {
           <div className="blog-posts-content-information">
             <ul className="blog-posts-content-information-list">
               {diplayPost.map((el) => (
-                <BlogItem post={el} />
+                <BlogItem key={el.id} post={el} />
               ))}
             </ul>
           </div>

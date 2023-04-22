@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Aside from 'components/Aside/Aside'
 import PopularPostsItem from './PopularPostsItem'
 import relatedPostsArray from 'utils/relatedPostsArray'
@@ -70,8 +71,13 @@ const PopularPosts = (props: Props) => {
                     />
                   </a>
                 </div>
-                <h2 className="popular-posts-content-pinned-post-description-title">
-                  Vestibulum ante sem et gravida ullamcorper feugiat
+                <h2>
+                  <Link
+                    to="/articles/10"
+                    className="popular-posts-content-pinned-post-description-title"
+                  >
+                    Vestibulum ante sem et gravida ullamcorper feugiat
+                  </Link>
                 </h2>
               </div>
             </div>
@@ -80,7 +86,7 @@ const PopularPosts = (props: Props) => {
             <div className="popular-posts-content-another-container">
               <ul className="popular-posts-content-another-list">
                 {relatedPostsArray.slice(0, 3).map((el) => (
-                  <PopularPostsItem post={el} />
+                  <PopularPostsItem key={el.title} post={el} />
                 ))}
               </ul>
             </div>

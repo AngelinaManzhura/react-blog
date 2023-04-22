@@ -15,6 +15,7 @@
       position: absolute;
       top: 8px;
       right: 0;
+      font-size: 0;
       border: none;
       background-color: $color-primary-light;
 
@@ -27,12 +28,48 @@
     &-button {
       display: none;
     }
+
+    &-menu-list {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      list-style: none;
+
+      &-item-link {
+        display: flex;
+        padding: 10px 20px;
+        border-bottom: 1px solid $color-secondary;
+        text-decoration: none;
+        font-family: 'Outfit', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: $color-primary;
+      }
+
+      &-item-link:hover {
+        color: $color-accent;
+      }
+
+      &-item-link-active {
+        color: $color-accent;
+      }
+
+      &-wrapper {
+        display: flex;
+        align-items: center;
+
+        &-image {
+          width: 20px;
+          margin: 0 5px;
+        }
+      }
+    }
   }
 }
 
 @include respond-to(tablet-landscape) {
   .header {
-    padding: 15px 38px 10px;
+    padding: 15px 38px 0;
 
     &-container {
       max-width: 708px;
@@ -48,28 +85,41 @@
       border-top: 1px solid rgba(0, 0, 0, 0.08);
 
       &-burger {
-        position: inherit;
+        position: initial;
       }
 
-      &-button {
-        position: absolute;
-        right: 10px;
+      &-contact-me {
         display: block;
         width: 100%;
-        max-width: 136px;
-        height: 42px;
-        border: 2px solid $color-primary;
-        font-family: 'Outfit', sans-serif;
-        font-size: 13px;
-        font-weight: 500;
-        letter-spacing: 1px;
-        color: $color-primary;
-        background-color: $color-primary-light;
-      }
 
-      &-button:hover {
-        color: $color-accent;
-        border: 2px solid $color-accent;
+        height: 42px;
+
+        &:not(.header-content-contact-me-drawer) {
+          position: absolute;
+          right: 10px;
+          max-width: 136px;
+        }
+
+        &.header-content-contact-me-drawer {
+          margin-bottom: 40px;
+        }
+
+        &-button {
+          width: inherit;
+          height: inherit;
+          border: 2px solid $color-primary;
+          font-family: 'Outfit', sans-serif;
+          font-size: 13px;
+          font-weight: 500;
+          letter-spacing: 1px;
+          color: $color-primary;
+          background-color: $color-primary-light;
+
+          &:hover {
+            color: $color-accent;
+            border: 2px solid $color-accent;
+          }
+        }
       }
     }
   }
@@ -85,7 +135,7 @@
 
 @include respond-to(laptop) {
   .header {
-    padding: 15px 42px 10px;
+    padding: 15px 42px 0;
 
     &-container {
       max-width: 1180px;
@@ -101,40 +151,10 @@
         margin: 0 auto;
 
         &-list {
-          display: flex;
-          gap: 40px;
-          list-style: none;
+          flex-direction: row;
 
           &-item-link {
-            display: flex;
-            text-decoration: none;
-            font-family: 'Outfit', sans-serif;
-            font-size: 14px;
-            font-weight: 500;
-            color: $color-primary;
-          }
-
-          &-item-link:hover {
-            color: $color-accent;
-          }
-
-          &-item-link-active {
-            display: flex;
-            text-decoration: none;
-            font-family: 'Outfit', sans-serif;
-            font-size: 14px;
-            font-weight: 500;
-            color: $color-accent;
-          }
-
-          &-wrapper {
-            display: flex;
-            align-items: center;
-
-            &-image {
-              width: 20px;
-              margin: 0 5px;
-            }
+            border-bottom: none;
           }
         }
       }

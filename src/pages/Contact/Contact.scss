@@ -1,0 +1,335 @@
+@import '../../responsive';
+@import '../../variables';
+
+.contact {
+  &-connection {
+    padding: 100px 33px;
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    &-questions {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 19px;
+      color: $color-primary;
+
+      span {
+        font-weight: 700;
+        padding-bottom: 30px;
+      }
+    }
+
+    &-image {
+      padding-bottom: 30px;
+    }
+
+    &-tel,
+    &-mail {
+      font-family: 'Prata', sans-serif;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 30px;
+      text-decoration: none;
+      color: $color-primary;
+    }
+
+    &-address {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 19px;
+      font-style: inherit;
+      color: $color-primary;
+      padding-top: 30px;
+    }
+  }
+
+  &-write {
+    margin: 0 33px;
+    background-image: url(../../assets/background_write.jpeg);
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 30px;
+    }
+
+    &-curabitur {
+      background-color: #e7f0eb;
+      padding: 100px 30px;
+
+      &-title {
+        font-family: 'Prata', sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 30px;
+        color: $color-primary;
+        margin-bottom: 30px;
+      }
+
+      &-description {
+        font-family: 'Outfit', sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 19px;
+        color: $color-primary;
+        margin-bottom: 30px;
+      }
+
+      &-list {
+        padding: 0;
+
+        &-item {
+          font-family: 'Outfit', sans-serif;
+          font-size: 13px;
+          font-weight: 300;
+          line-height: 19px;
+          list-style: none;
+          color: $color-primary;
+
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+      background-color: $color-primary-light;
+      padding: 100px 30px;
+
+      &-title {
+        font-family: 'Prata', sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        color: $color-primary;
+        margin-bottom: 30px;
+      }
+
+      &-information {
+        font-family: 'Outfit', sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 19px;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #d1d6de;
+        color: $color-primary;
+        margin-bottom: 30px;
+
+        &::placeholder {
+          font-family: 'Outfit', sans-serif;
+          font-size: 13px;
+          font-weight: 300;
+          line-height: 19px;
+          color: $color-primary;
+        }
+      }
+
+      &-button {
+        font-family: 'Outfit', sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 13px;
+        border: none;
+        color: $color-primary-light;
+        background-color: $color-primary;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .contact {
+    &-connection {
+      &-questions {
+        line-height: 21px;
+      }
+
+      &-tel,
+      &-mail {
+        font-size: 38px;
+        line-height: 38px;
+      }
+
+      &-address {
+        line-height: 21px;
+      }
+    }
+
+    &-write {
+      &-curabitur {
+        &-title {
+          font-size: 38px;
+          line-height: 38px;
+        }
+
+        &-description {
+          line-height: 21px;
+        }
+
+        &-list-item {
+          line-height: 21px;
+        }
+      }
+
+      &-form {
+        &-title {
+          font-size: 30px;
+          line-height: 36px;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(tablet-landscape) {
+  .contact {
+    &-connection {
+      &-questions,
+      &-address {
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      &-tel,
+      &-mail {
+        font-size: 43px;
+        line-height: 43px;
+      }
+    }
+
+    &-write {
+      &-content {
+        flex-direction: row;
+        align-items: initial;
+        gap: 0px;
+      }
+
+      &-curabitur {
+        width: 50%;
+
+        &-title {
+          font-size: 43px;
+          line-height: 43px;
+        }
+
+        &-description,
+        &-list-item {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+
+      &-form {
+        justify-content: flex-start;
+        width: 50%;
+
+        &-title {
+          font-size: 34px;
+          line-height: 41px;
+        }
+
+        &-button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(laptop-small) {
+  .contact {
+    &-connection {
+      padding: 100px 15px;
+
+      &-content {
+        max-width: 940px;
+      }
+
+      &-questions,
+      &-address {
+        font-size: 16px;
+        line-height: 28px;
+      }
+
+      &-tel,
+      &-mail {
+        font-size: 50px;
+        line-height: 50px;
+      }
+    }
+
+    &-write {
+      margin: 0 15px;
+
+      &-content {
+        max-width: 940px;
+      }
+
+      &-curabitur {
+        &-title {
+          font-size: 50px;
+          line-height: 50px;
+        }
+
+        &-description,
+        &-list-item {
+          font-size: 16px;
+          line-height: 28px;
+        }
+      }
+
+      &-form {
+        &-title {
+          font-size: 40px;
+          line-height: 48px;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(laptop) {
+  .contact {
+    &-connection {
+      padding: 100px 30px;
+
+      &-content {
+        max-width: 1180px;
+      }
+    }
+
+    &-write {
+      margin: 0 30px;
+
+      &-content {
+        max-width: 1180px;
+      }
+    }
+  }
+}

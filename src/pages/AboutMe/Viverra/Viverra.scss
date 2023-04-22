@@ -1,0 +1,122 @@
+@import '../../../responsive';
+@import '../../../variables';
+
+.viverra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 33px;
+
+  &-content {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+
+    &-description {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 19px;
+      letter-spacing: 3px;
+      color: $color-primary;
+    }
+  }
+
+  &-title {
+    font-family: 'Prata', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    color: $color-primary;
+    margin-bottom: 30px;
+  }
+
+  &-button {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 13px;
+    border: none;
+    color: $color-primary-light;
+    background-color: $color-primary;
+    padding: 20px;
+  }
+}
+
+@include respond-to(tablet) {
+  .viverra {
+    &-title {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+}
+
+@include respond-to(tablet-landscape) {
+  .viverra {
+    &-content {
+      text-align: left;
+    }
+
+    &-logo {
+      justify-content: flex-start;
+    }
+
+    &-title {
+      font-size: 34px;
+      line-height: 41px;
+      margin-bottom: 0px;
+      width: 345px;
+    }
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-button {
+      width: 300px;
+      height: 57px;
+    }
+  }
+}
+
+@include respond-to(laptop-small) {
+  .viverra {
+    padding: 100px 15px;
+
+    &-content {
+      max-width: 940px;
+    }
+
+    &-title {
+      font-size: 40px;
+      line-height: 48px;
+      width: 470px;
+    }
+  }
+}
+
+@include respond-to(laptop) {
+  .viverra {
+    padding: 100px 30px;
+
+    &-content {
+      max-width: 1180px;
+    }
+
+    &-title {
+      width: 480px;
+    }
+  }
+}

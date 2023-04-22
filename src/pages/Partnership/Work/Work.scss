@@ -1,0 +1,130 @@
+@import '../../../responsive';
+@import '../../../variables';
+
+.work {
+  background-color: #e7f0eb;
+  padding: 100px 30px;
+
+  &-content {
+    width: 100%;
+    padding: 0px 33px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+
+    &-description {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 19px;
+      letter-spacing: 3px;
+      color: $color-primary;
+    }
+  }
+
+  &-title {
+    font-family: 'Prata', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    color: $color-primary;
+    margin-bottom: 30px;
+  }
+
+  &-description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 19px;
+    color: $color-primary;
+    margin-bottom: 30px;
+  }
+
+  &-button {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 13px;
+    border: none;
+    color: $color-primary-light;
+    background-color: $color-primary;
+    padding: 20px;
+  }
+}
+
+@include respond-to(tablet) {
+  .work {
+    &-logo-description {
+      letter-spacing: 4px;
+    }
+
+    &-title {
+      font-size: 38px;
+      line-height: 38px;
+    }
+
+    &-description {
+      line-height: 21px;
+    }
+  }
+}
+
+@include respond-to(tablet-landscape) {
+  .work {
+    text-align: center;
+    padding: 100px 35px;
+
+    &-title {
+      font-size: 43px;
+      line-height: 43px;
+      max-width: 370px;
+      margin: 0 auto 30px;
+    }
+
+    &-description {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}
+
+@include respond-to(laptop-small) {
+  .work {
+    &-content {
+      max-width: 940px;
+      padding: 0px 15px;
+    }
+
+    &-logo-description {
+      letter-spacing: 5px;
+    }
+
+    &-title {
+      font-size: 50px;
+      line-height: 50px;
+      max-width: 430px;
+    }
+
+    &-description {
+      font-size: 16px;
+      line-height: 28px;
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@include respond-to(laptop) {
+  .work {
+    &-content {
+      max-width: 1180px;
+      padding: 0px 30px;
+    }
+  }
+}

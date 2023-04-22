@@ -1,0 +1,98 @@
+@import '../../../responsive';
+@import '../../../variables';
+
+.arcu {
+  text-align: center;
+  margin-bottom: 80px;
+
+  &-title {
+    font-family: 'Prata', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    margin-bottom: 30px;
+    color: $color-primary;
+  }
+
+  &-description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 30px;
+    color: $color-primary;
+  }
+
+  &-information {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 19px;
+    margin-bottom: 30px;
+    color: $color-primary;
+  }
+
+  &-image {
+    width: 100%;
+    margin-top: 70px;
+  }
+}
+
+@include respond-to(tablet) {
+  .arcu {
+    &-title {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    &-description {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    &-information {
+      line-height: 21px;
+    }
+  }
+}
+
+@include respond-to(tablet-landscape) {
+  .arcu {
+    text-align: left;
+
+    &-title {
+      font-size: 34px;
+      line-height: 41px;
+    }
+
+    &-description {
+      font-size: 20px;
+      line-height: 29px;
+    }
+
+    &-information {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}
+
+@include respond-to(laptop-small) {
+  .arcu {
+    &-title {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    &-description {
+      font-size: 24px;
+      line-height: 34px;
+    }
+
+    &-information {
+      font-size: 16px;
+      line-height: 28px;
+      margin-bottom: 50px;
+    }
+  }
+}
