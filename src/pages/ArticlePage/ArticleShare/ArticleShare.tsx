@@ -18,16 +18,16 @@ const ArticleShare = (props: Props) => {
         </div>
         <div className="share-list">
           <span className="share-list-title">Share:</span>
-          <a className="share-list-link" href="">
+          <a className="share-list-link" href="https://www.facebook.com/">
             <img className="share-list-link-image" src={icon_facebook} alt="" />
           </a>
-          <a className="share-list-link" href="">
+          <a className="share-list-link" href="https://twitter.com/">
             <img className="share-list-link-image" src={icon_twitter} alt="" />
           </a>
-          <a className="share-list-link" href="">
+          <a className="share-list-link" href="https://www.linkedin.com/">
             <img className="share-list-link-image" src={icon_linkedin} alt="" />
           </a>
-          <a className="share-list-link" href="">
+          <a className="share-list-link" href="https://www.pinterest.com/">
             <img
               className="share-list-link-image"
               src={icon_pinterest}
