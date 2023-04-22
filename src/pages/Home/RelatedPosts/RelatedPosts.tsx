@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import related_posts_circle from 'assets/related_posts_circle.svg'
 import relatedPostsArray from 'utils/relatedPostsArray'
 import './RelatedPosts.scss'
@@ -53,8 +54,14 @@ const RelatedPosts = (props: Props) => {
                       </span>
                     </a>
                   </div>
-                  <h2 className="related-posts-content-list-item-description-title">
-                    {el.title}
+                  <h2>
+                    <Link
+                      className="related-posts-content-list-item-description-title"
+                      to={`/articles/${el.id}`}
+                      reloadDocument={true}
+                    >
+                      {el.title}
+                    </Link>
                   </h2>
                 </div>
               </li>

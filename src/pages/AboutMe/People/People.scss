@@ -1,0 +1,163 @@
+@import '../../../responsive';
+@import '../../../variables';
+
+.people {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 33px;
+
+  &-content {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+
+    &-description {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 19px;
+      letter-spacing: 3px;
+      color: $color-primary;
+    }
+  }
+
+  &-title {
+    font-family: 'Prata', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    color: $color-primary;
+    margin-bottom: 30px;
+  }
+
+  &-description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 19px;
+    color: $color-primary;
+    margin-bottom: 20px;
+  }
+
+  &-button {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 13px;
+    border: none;
+    color: $color-primary-light;
+    background-color: $color-primary;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  &-image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &-information {
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color: $color-primary;
+  }
+}
+
+@include respond-to(tablet) {
+  .people {
+    &-title {
+      font-size: 38px;
+      line-height: 38px;
+    }
+
+    &-description {
+      line-height: 21px;
+    }
+
+    &-information {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+}
+
+@include respond-to(tablet-landscape) {
+  .people {
+    &-content {
+      display: flex;
+      gap: 60px;
+      text-align: left;
+    }
+
+    &-logo {
+      justify-content: flex-start;
+    }
+
+    &-title {
+      font-size: 43px;
+      line-height: 43px;
+    }
+
+    &-description {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &-information {
+      font-size: 20px;
+      line-height: 29px;
+    }
+  }
+}
+
+@include respond-to(laptop-small) {
+  .people {
+    padding: 100px 15px;
+
+    &-content {
+      max-width: 940px;
+    }
+
+    &-logo-description {
+      letter-spacing: 5px;
+    }
+
+    &-title {
+      font-size: 50px;
+      line-height: 50px;
+    }
+
+    &-description {
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    &-information {
+      font-size: 24px;
+      line-height: 34px;
+    }
+  }
+}
+
+@include respond-to(laptop) {
+  .people {
+    padding: 100px 30px;
+
+    &-content {
+      gap: 70px;
+      max-width: 1180px;
+    }
+  }
+}

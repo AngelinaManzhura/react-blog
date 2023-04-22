@@ -1,0 +1,143 @@
+@import '../../../responsive';
+@import '../../../variables';
+
+.see {
+  margin: 100px 0 50px;
+  padding: 60px 40px;
+  background-color: #fff8f2;
+
+  &-title {
+    text-align: center;
+    font-family: 'Prata', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    color: $color-primary;
+    margin-bottom: 20px;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+
+    &-item {
+      &-image {
+        width: 100%;
+      }
+
+      &-description {
+        padding: 15px 15px 0;
+
+        &-wrapper {
+          display: flex;
+          flex-wrap: nowrap;
+          gap: 5px;
+          margin-bottom: 5px;
+        }
+
+        &-admin,
+        &-date {
+          display: flex;
+          align-items: center;
+          gap: 3px;
+          text-decoration: none;
+
+          &-icon {
+            width: 15px;
+          }
+
+          &-information {
+            font-family: 'Outfit', sans-serif;
+            font-size: 13px;
+            font-weight: 300;
+            line-height: 16px;
+            color: $color-secondary-dark;
+          }
+        }
+
+        &-title {
+          font-family: 'Outfit', sans-serif;
+          font-size: 24px;
+          font-weight: 300;
+          line-height: 29px;
+          color: $color-primary;
+          margin-bottom: 15px;
+          text-decoration: none;
+
+          &:hover {
+            color: $color-accent;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .see {
+    &-title {
+      font-size: 38px;
+      line-height: 38px;
+    }
+  }
+}
+
+@include respond-to(tablet-landscape) {
+  .see {
+    &-title {
+      font-size: 43px;
+      line-height: 43px;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: inherit;
+      gap: 8px;
+
+      &-item-description {
+        &-admin,
+        &-date {
+          &-information {
+            font-size: 11px;
+          }
+        }
+
+        &-title {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(laptop-small) {
+  .see {
+    padding: 60px 50px 50px;
+
+    &-title {
+      font-size: 50px;
+      line-height: 50px;
+    }
+
+    &-list {
+      gap: 12px;
+
+      &-item-description {
+        &-admin,
+        &-date {
+          &-information {
+            font-size: 16px;
+            line-height: 28px;
+          }
+        }
+
+        &-title {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

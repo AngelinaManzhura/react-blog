@@ -1,0 +1,168 @@
+@import '../../../responsive';
+@import '../../../variables';
+
+.rutrum {
+  text-align: center;
+  margin-bottom: 50px;
+
+  &-decor {
+    display: flex;
+    margin: 0 auto;
+    width: 24px;
+    padding-bottom: 15px;
+  }
+
+  &-title {
+    font-family: 'Prata', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 30px;
+    color: $color-primary;
+  }
+
+  &-information {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 19px;
+    margin-bottom: 30px;
+    color: $color-primary;
+  }
+
+  &-list {
+    list-style: none;
+    font-size: 0px;
+    padding: 0px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+
+    &-item {
+      &-image {
+        width: 100%;
+      }
+    }
+  }
+
+  &-wrapper {
+    padding: 20px 20px;
+    border: 1px solid #efefef;
+    margin-bottom: 20px;
+  }
+
+  &-table {
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    border-spacing: 0;
+    border-radius: 5px;
+
+    &-decor {
+      border-bottom: 1px solid #efefef;
+    }
+
+    &-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 19px;
+      color: #444444;
+      padding: 10px;
+    }
+
+    &-information {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 19px;
+      color: $color-primary;
+      padding: 10px;
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .rutrum {
+    &-title {
+      font-size: 38px;
+      line-height: 38px;
+    }
+
+    &-information {
+      line-height: 21px;
+    }
+
+    &-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      &-item {
+        width: 50%;
+      }
+    }
+
+    &-table {
+      &-title,
+      &-information {
+        line-height: 21px;
+      }
+    }
+  }
+}
+
+@include respond-to(tablet-landscape) {
+  .rutrum {
+    text-align: left;
+    margin-bottom: 70px;
+
+    &-title {
+      text-align: center;
+      font-size: 43px;
+      line-height: 43px;
+    }
+
+    &-information {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &-list {
+      margin-bottom: 40px;
+    }
+
+    &-wrapper {
+      margin-bottom: 40px;
+    }
+
+    &-table {
+      &-title,
+      &-information {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+@include respond-to(laptop-small) {
+  .rutrum {
+    &-title {
+      font-size: 50px;
+      line-height: 50px;
+    }
+
+    &-information {
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    &-table {
+      &-title,
+      &-information {
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+  }
+}

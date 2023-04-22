@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom'
 import Logo from 'components/Logo/Logo'
-import burger_menu from 'assets/burger_menu.png'
 import HeaderMenu from 'components/HeaderMenu/HeaderMenu'
+import burger_menu from 'assets/burger_menu.png'
 import './Header.scss'
 
 type Props = {}
@@ -19,9 +20,15 @@ const Header = (props: Props) => {
             />
           </button>
           <HeaderMenu />
-          <button className="header-content-button" type="submit">
-            CONTACT ME
-          </button>
+          <Link
+            to="/contact"
+            reloadDocument={true}
+            className="header-content-contact-me"
+          >
+            <button className="header-content-contact-me-button" type="submit">
+              CONTACT ME
+            </button>
+          </Link>
         </div>
       </div>
     </header>
