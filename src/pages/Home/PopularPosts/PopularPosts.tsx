@@ -86,7 +86,7 @@ const PopularPosts = (props: Props) => {
             <div className="popular-posts-content-another-container">
               <ul className="popular-posts-content-another-list">
                 {relatedPostsArray.slice(0, 3).map((el) => (
-                  <PopularPostsItem post={el} />
+                  <PopularPostsItem key={el.title} post={el} />
                 ))}
               </ul>
             </div>

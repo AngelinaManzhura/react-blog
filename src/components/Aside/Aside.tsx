@@ -46,7 +46,10 @@ const Aside = (props: Props) => {
             <h3 className="aside-content-categories-title">CATEGORIES</h3>
             <ul className="aside-content-categories-list">
               {categoriesArray.map((el) => (
-                <li className="aside-content-categories-list-item">
+                <li
+                  key={el.description}
+                  className="aside-content-categories-list-item"
+                >
                   <NavLink
                     to={el.path}
                     className="aside-content-categories-list-item-link"

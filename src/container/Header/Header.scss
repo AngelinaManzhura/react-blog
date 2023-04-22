@@ -28,6 +28,42 @@
     &-button {
       display: none;
     }
+
+    &-menu-list {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      list-style: none;
+
+      &-item-link {
+        display: flex;
+        padding: 10px 20px;
+        border-bottom: 1px solid $color-secondary;
+        text-decoration: none;
+        font-family: 'Outfit', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: $color-primary;
+      }
+
+      &-item-link:hover {
+        color: $color-accent;
+      }
+
+      &-item-link-active {
+        color: $color-accent;
+      }
+
+      &-wrapper {
+        display: flex;
+        align-items: center;
+
+        &-image {
+          width: 20px;
+          margin: 0 5px;
+        }
+      }
+    }
   }
 }
 
@@ -53,12 +89,20 @@
       }
 
       &-contact-me {
-        position: absolute;
-        right: 10px;
         display: block;
         width: 100%;
-        max-width: 136px;
+
         height: 42px;
+
+        &:not(.header-content-contact-me-drawer) {
+          position: absolute;
+          right: 10px;
+          max-width: 136px;
+        }
+
+        &.header-content-contact-me-drawer {
+          margin-bottom: 40px;
+        }
 
         &-button {
           width: inherit;
@@ -107,40 +151,10 @@
         margin: 0 auto;
 
         &-list {
-          display: flex;
-          gap: 40px;
-          list-style: none;
+          flex-direction: row;
 
           &-item-link {
-            display: flex;
-            text-decoration: none;
-            font-family: 'Outfit', sans-serif;
-            font-size: 14px;
-            font-weight: 500;
-            color: $color-primary;
-          }
-
-          &-item-link:hover {
-            color: $color-accent;
-          }
-
-          &-item-link-active {
-            display: flex;
-            text-decoration: none;
-            font-family: 'Outfit', sans-serif;
-            font-size: 14px;
-            font-weight: 500;
-            color: $color-accent;
-          }
-
-          &-wrapper {
-            display: flex;
-            align-items: center;
-
-            &-image {
-              width: 20px;
-              margin: 0 5px;
-            }
+            border-bottom: none;
           }
         }
       }
