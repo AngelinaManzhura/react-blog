@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import relatedPostsArray, {
   getRelatedPostsObject,
   RelatedPosts,
@@ -36,7 +36,10 @@ const ArticlePage = ({
           <div className="article-banner-content">
             <h1 className="article-banner-content-title">{article.title}</h1>
             <div className="article-banner-content-description">
-              <a className="article-banner-content-description-link" href="">
+              <Link
+                className="article-banner-content-description-link"
+                to="/blog"
+              >
                 <img
                   className="article-banner-content-description-link-icon"
                   src={article.adminIcon}
@@ -45,8 +48,8 @@ const ArticlePage = ({
                 <span className="article-banner-content-description-link-information">
                   {article.adminInformation}
                 </span>
-              </a>
-              <a className="article-banner-content-description-link" href="">
+              </Link>
+              <div className="article-banner-content-description-link">
                 <img
                   className="article-banner-content-description-link-icon"
                   src={article.dateIcon}
@@ -55,8 +58,11 @@ const ArticlePage = ({
                 <span className="article-banner-content-description-link-information">
                   {article.date}
                 </span>
-              </a>
-              <a className="article-banner-content-description-link" href="">
+              </div>
+              <Link
+                className="article-banner-content-description-link"
+                to={`/blog/${article.category.name}`}
+              >
                 <img
                   className="article-banner-content-description-link-icon"
                   src={article.categoriesIcon}
@@ -65,7 +71,7 @@ const ArticlePage = ({
                 <span className="article-banner-content-description-link-information">
                   {article.category.name}
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
