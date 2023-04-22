@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import aside_aboutme from 'assets/aside_aboutme.svg'
 import aside_quote from 'assets/aside_quote.svg'
 import aside_decoration from 'assets/aside_decoration.svg'
@@ -7,6 +8,7 @@ import aside_instagram3 from 'assets/aside_instagram3.svg'
 import aside_instagram4 from 'assets/aside_instagram4.svg'
 import aside_instagram5 from 'assets/aside_instagram5.svg'
 import aside_instagram6 from 'assets/aside_instagram6.svg'
+import categoriesArray from 'utils/categoriesArray'
 import './Aside.scss'
 
 type Props = {}
@@ -43,26 +45,17 @@ const Aside = (props: Props) => {
           <div className="aside-content-categories">
             <h3 className="aside-content-categories-title">CATEGORIES</h3>
             <ul className="aside-content-categories-list">
-              <li className="aside-content-categories-list-item">
-                <a className="aside-content-categories-list-item-link" href="/">
-                  Fashion
-                </a>
-              </li>
-              <li className="aside-content-categories-list-item">
-                <a className="aside-content-categories-list-item-link" href="/">
-                  Lifestyle
-                </a>
-              </li>
-              <li className="aside-content-categories-list-item">
-                <a className="aside-content-categories-list-item-link" href="/">
-                  Pinned
-                </a>
-              </li>
-              <li className="aside-content-categories-list-item">
-                <a className="aside-content-categories-list-item-link" href="/">
-                  Travel
-                </a>
-              </li>
+              {categoriesArray.map((el) => (
+                <li className="aside-content-categories-list-item">
+                  <NavLink
+                    to={el.path}
+                    className="aside-content-categories-list-item-link"
+                    reloadDocument={true}
+                  >
+                    {el.description}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
             <img
               className="aside-content-categories-decoration"

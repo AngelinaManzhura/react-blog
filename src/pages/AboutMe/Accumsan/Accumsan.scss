@@ -1,0 +1,159 @@
+@import '../../../responsive';
+@import '../../../variables';
+
+.accumsan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e9f3fd;
+
+  &-content {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 33px 0px;
+  }
+
+  &-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+
+    &-description {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 19px;
+      letter-spacing: 3px;
+      color: $color-primary;
+    }
+  }
+
+  &-title {
+    font-family: 'Prata', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    color: $color-primary;
+    margin-bottom: 30px;
+  }
+
+  &-description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 19px;
+    color: $color-primary;
+    margin-bottom: 30px;
+  }
+
+  &-button {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 13px;
+    border: none;
+    color: $color-primary-light;
+    background-color: $color-primary;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  &-image {
+    margin-bottom: 30px;
+  }
+
+  &-photo {
+    width: 100%;
+    padding-bottom: 100px;
+  }
+}
+
+@include respond-to(tablet) {
+  .accumsan {
+    &-title {
+      font-size: 38px;
+      line-height: 38px;
+    }
+
+    &-description {
+      line-height: 21px;
+    }
+  }
+}
+
+@include respond-to(tablet-landscape) {
+  .accumsan {
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    &-logo {
+      justify-content: flex-start;
+    }
+
+    &-title {
+      font-size: 43px;
+      line-height: 43px;
+      width: 277px;
+    }
+
+    &-description {
+      font-size: 14px;
+      line-height: 24px;
+      width: 180px;
+    }
+
+    &-image {
+      width: 200px;
+    }
+
+    &-photo {
+      padding-bottom: 0px;
+    }
+  }
+}
+
+@include respond-to(laptop-small) {
+  .accumsan {
+    &-content {
+      max-width: 960px;
+      padding: 100px 15px 0px;
+    }
+
+    &-logo-description {
+      letter-spacing: 5px;
+    }
+
+    &-title {
+      font-size: 50px;
+      line-height: 50px;
+      width: 370px;
+    }
+
+    &-description {
+      font-size: 16px;
+      line-height: 28px;
+      width: 240px;
+    }
+
+    &-image {
+      width: 230px;
+    }
+  }
+}
+
+@include respond-to(laptop) {
+  .accumsan {
+    &-content {
+      max-width: 1240px;
+      padding: 100px 30px 0px;
+    }
+  }
+}

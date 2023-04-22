@@ -1,0 +1,167 @@
+@import '../../../responsive';
+@import '../../../variables';
+
+.share {
+  border: 11px solid #e7f0eb;
+  padding: 60px 40px 30px;
+
+  &-wrapper {
+    padding-bottom: 40px;
+    border-bottom: 2px solid #e7f0eb;
+  }
+
+  &-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
+
+    &-description {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 19px;
+      letter-spacing: 3px;
+      color: $color-primary;
+    }
+  }
+
+  &-list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e7f0eb;
+
+    &-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 19px;
+      color: $color-primary;
+    }
+
+    &-link {
+      font-size: 0;
+
+      &-image {
+        width: 20px;
+      }
+    }
+  }
+
+  &-container {
+    padding-top: 60px;
+
+    &-image {
+      display: flex;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    &-description {
+      text-align: center;
+
+      &-title {
+        font-family: 'Outfit', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        color: $color-primary;
+        margin-bottom: 20px;
+      }
+
+      &-information {
+        font-family: 'Outfit', sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 19px;
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .share {
+    &-container-description {
+      &-title {
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+      &-information {
+        line-height: 21px;
+      }
+    }
+  }
+}
+
+@include respond-to(tablet-landscape) {
+  .share {
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 55px;
+    }
+
+    &-logo {
+      margin-bottom: 0px;
+      padding-top: 15px;
+    }
+
+    &-list {
+      gap: 12px;
+
+      &-title {
+        font-size: 14px;
+      }
+    }
+
+    &-container {
+      display: flex;
+      gap: 10px;
+
+      &-description {
+        text-align: left;
+
+        &-title {
+          font-size: 20px;
+          line-height: 29px;
+        }
+
+        &-information {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(laptop-small) {
+  .share {
+    padding: 70px 50px 50px;
+
+    &-logo-description {
+      letter-spacing: 5px;
+    }
+
+    &-list-title {
+      font-size: 16px;
+    }
+
+    &-container-description {
+      &-title {
+        font-size: 24px;
+        line-height: 34px;
+      }
+
+      &-information {
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+  }
+}

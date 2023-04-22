@@ -2,84 +2,81 @@
 @import '../../../variables';
 
 .mystories {
-    &-content {
-        width: 100%;
-        margin: 0 auto;
+  padding-top: 100px;
 
-        &-logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            margin: 15px 0;
+  &-content {
+    width: 100%;
+    margin: 0 auto;
 
-            &-description {
-                font-family: 'Outfit', sans-serif;
-                font-size: 13px;
-                font-weight: 600;
-                line-height: 16px;
-                letter-spacing: 3px;
-                color: $color-primary;
-            }
-        }
+    &-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin: 15px 0;
 
-        &-list {
-            font-size: 0;
-            list-style: none;
-            padding: 0;
-
-            &-item {
-                width: 100%;
-
-                &-image {
-                    width: 100%;
-                }
-
-            }
-        }
+      &-description {
+        font-family: 'Outfit', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: 3px;
+        color: $color-primary;
+      }
     }
 
+    &-list {
+      font-size: 0;
+      list-style: none;
+      padding: 0;
+
+      &-item {
+        width: 100%;
+
+        &-image {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 @include respond-to(tablet) {
-    .mystories {
-        &-content {
-            &-logo-description {
-                letter-spacing: 4px;
-            }
+  .mystories {
+    &-content {
+      &-logo-description {
+        letter-spacing: 4px;
+      }
 
-            &-list {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
+      &-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
 
-                &-item {
-                    width: 50%;
-                }
-            }
+        &-item {
+          width: 50%;
         }
+      }
     }
+  }
 }
 
 @include respond-to(tablet-landscape) {
-    .mystories {
-        &-content {
-            &-list {
-                flex-wrap: nowrap;
-            }
-        }
+  .mystories {
+    &-content {
+      &-list {
+        flex-wrap: nowrap;
+      }
     }
+  }
 }
 
 @include respond-to(laptop-small) {
-    .mystories {
-        &-content {
-            &-logo-description {
-                letter-spacing: 5px;
-            }
-        }
+  .mystories {
+    &-content {
+      &-logo-description {
+        letter-spacing: 5px;
+      }
     }
+  }
 }
-
-
-
